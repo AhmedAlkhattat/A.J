@@ -1,0 +1,352 @@
+//Name:Ahmed Alkhattat
+//Class: CPE 2350
+//Date : 07/01/2021
+//Location :My house
+//Exam 1
+
+
+
+
+
+
+//problem 3 a
+#include <stdio.h>
+
+char aa,bb,cc,dd;
+int main() 
+{ 
+printf("Please enter 4 letters (no spaces no coma):\n");
+scanf("%c%c%c%c",&aa,&bb,&cc,&dd);
+printf("%c%c%c%c",aa,bb,cc,dd);
+return 0; 
+}
+
+
+
+
+//problem 3 b
+#include <stdio.h>
+
+char a[4];
+int main() 
+{ 
+printf("Please enter 4 letters (no spaces no coma):\n");
+scanf("%c%c%c%c",&a[0],&a[1],&a[2],&a[3]);
+printf("%c%c%c%c",a[0],a[1],a[2],a[3]);
+return 0; 
+}
+
+-------------------------------------------------------------------------------------------------
+//problem #4 code 1
+#include <stdio.h>
+
+int main() 
+{
+ printf("S\tM\tT\tW\tT\tF\tS\n");
+ printf("\t1\t2\t3\t4\t5\t6\n");
+ printf("7\t8\t9\t10\t11\t12\t13\n");
+ printf("14\t15\t16\t17\t18\t19\t20\n");
+ printf("21\t22\t23\t24\t25\t26\t27\n");
+ printf("28\t\t\t\t\t\t\n");
+return 0;
+
+  }
+
+
+
+//problem #4 code 2
+#include <stdio.h>
+
+int main() 
+{
+  //char array holds the weekdays simples 
+char w[8]={'S','M','T','W','T','F','S'};//declare and initialize the array
+int day[28];//declare the array
+int size=28; //size of the array
+//using for loop to fill the array with numbers from 1 to 28
+for(int i=0;i<size;i++){
+  day[i]=(i+1);
+}
+//print the arrays to create the calendar 
+printf("%4c%4c%4c%4c%4c%4c%4c\n",w[0],w[1],w[2],w[3],w[4],w[5],w[6]);
+printf("\t%4d%4d%4d%4d%4d%4d\n",day[0],day[1],day[2],day[3],day[4],day[5]);
+printf("%4d%4d%4d%4d%4d%4d%4d\n",day[6],day[7],day[8],day[9],day[10],day[11],day[12]);
+printf("%4d%4d%4d%4d%4d%4d%4d\n",day[13],day[14],day[15],day[16],day[17],day[18],day[19]);
+printf("%4d%4d%4d%4d%4d%4d%4d\n",day[20],day[21],day[22],day[23],day[24],day[25],day[26]);
+printf("%4d\n",day[27]);
+return 0;
+
+
+  }
+
+
+
+-------------------------------------------------------------------------------------------------
+
+
+//problem 6
+#include <stdio.h>
+
+
+int main() 
+{ 
+float voltage=120; 
+float power=0; 
+float current=0; 
+printf("Enter the selected power rating\n"); 
+scanf("%f" ,&power); 
+current=power/voltage; 
+
+while(current>30 )
+{ 
+printf("Re-enter a less selected power rating\n");  
+scanf("%f" ,&power);   
+current = power/voltage; 
+} 
+printf("The selected power rating %0.2f is within the limits\n", power); 
+
+return 0; 
+}
+
+
+-------------------------------------------------------------------------------------------------
+
+
+
+//problem 7 a
+
+#include <stdio.h>
+
+int main() 
+{
+
+char a[5]={'A','B','C','D','E'}; 
+char b[5]={'B','C','D','E','A'}; 
+int i=0; 
+for(i=1;i<5;i++) 
+{ 
+a[i]=b[i-1]; 
+} 
+for(i=0;i<5;i++) 
+{ 
+printf("%c\t",a[i]); 
+
+} 
+
+return 0;
+}
+
+
+
+
+//problem 7 b
+
+#include <stdio.h>
+
+int main() 
+{
+int i=1;
+printf("i = %d\n", i);
+printf("++i = %d\n", ++i);
+
+return 0;
+}
+
+
+
+//problem 7 c
+#include <stdio.h>
+
+int main() 
+{
+int i=1;
+
+printf("i++ = %d\n", i++);
+printf("++i = %d\n", ++i);
+
+
+return 0;
+}
+
+
+
+//problem 7 d
+#include <stdio.h>
+
+int main() 
+{
+int i=1;
+
+printf("i-- = %d\n", i--);
+printf("--i = %d\n", --i);
+
+
+return 0;
+}
+
+
+
+
+-------------------------------------------------------------------------------------------------
+
+//problem #9 code 1
+#include <stdio.h>
+//Char variable to save customer response
+char a; 
+//main function
+int main() 
+{
+  //welcoming letter
+    printf("Hello there ,this is a simple program works to determine wither alphabetical letter is a vowel or a consonant \n\n");
+
+
+  //User instruction.
+ printf("Please Enter a letter to check if it is vowel or a consonant:\n" );
+//getting the input from the user
+ scanf("%c",& a);   
+//check if the user input match the vowels letters 
+if( a =='A'||a=='a'||a=='E'||a=='e'||a=='I'||a=='i'||a=='O'||a=='o'||a=='U'||a=='u')
+{
+//if the user in put match the vowels letter print it is vowels
+printf("The Letter is Vowel.\n");
+}
+//if the user input does not match the vowels letters print it is consonant
+else{
+ printf("The Letter is Consonant.\n"); 
+}
+//End 
+return 0  ;
+ }
+
+
+
+
+
+
+//problem #9 code 2 using array and for loop
+
+#include <stdio.h>
+
+ int found;
+ // array size
+int Size = 11; 
+//char array has all the vowel letters 
+ char vowel[11]={'A','a','E','e','I','i','O','o','U','u'};
+ //char variable to save the customer response
+ char customChoise ;
+// Welcoming message function
+ void welcome(){
+printf("Hello there ,this is a simple program works to determine wither alphabetical letter is a vowel or a consonant. \n\n");
+
+ }
+//function to check if the letter is vowel or not
+ void check(){ 
+     printf("Please Enter a letter to check if it is vowel or a consonant:\n" );
+     //getting the char from the customer and saving it in variable  customChoise.
+ scanf("%c",& customChoise); 
+
+    found=0;
+    //using for to loop through the array and check if the element chose is exist in the array  
+ for(int i=0;i<Size;i++){
+   //if the element exist found =1  
+if(vowel[i]==customChoise){
+
+    found =1;
+
+      break;
+   }
+
+ }
+//if element exist in the array print it is vowel 
+if(found ==1){ 
+
+     printf("The Letter is Vowel.\n");
+}
+//else if the element is not exist in the array  print it is consonant
+  else{
+ printf("The Letter is Consonant.\n"); 
+}
+
+  }
+ //main method 
+int main() 
+{
+//call welcome function to print a welcoming letter
+  welcome();  
+  //call check function to start the vowel and consonant checking
+  check(); 
+  return 0;
+} 
+
+
+
+-------------------------------------------------------------------------------------------------
+
+//Extra credit
+
+
+
+//Extra credit problem #1 
+#include <stdio.h>
+//Char variable to save customer response
+char b; 
+//main function
+int main() 
+{
+  //welcoming letter
+    printf("Hello there ,this is a simple program works to convert the entry to ASCII’s hexadecimal value \n\n");
+
+     printf("Please Enter any letter or a character from your keyboard to covert it into ASCII’s hexadecimal value :\n" );
+     //getting the user input as a char
+     scanf("%c",&b);
+     //print the user input in a hexadecimal form.
+     printf("You Entered '%c' ,which it's ASCII hexadecimal conversion value is :\n%x",b,b);
+
+
+     return 0;
+}
+
+
+//Extra credit problem #2
+#include <stdio.h>
+//integer variable to save customer response
+int num; 
+//main function
+int main() 
+{
+  //welcoming letter
+    printf("Hello there ,this is a simple program works to  tests whether a number is positive  or negative\n\n");
+
+     printf("Please Enter an integer to check if it is positive or negative :\n" );
+     //getting the user input as an integer
+     scanf("%d",&num);
+
+      //if the number greater then zero it is positive 
+     if (num>0){
+        printf("The number you Entered '%d' is positive",num);
+     }
+     //if the number equal to zero it is neutral
+     else if(num==0){
+        printf("The number you Entered '%d' is neutral",num);
+   }
+   //if the number less then zero it is negative 
+     else{
+        printf("The number you Entered '%d' is negative",num);
+
+}
+
+     
+
+
+     return 0;
+}
+
+
+
+
+
+
+
+
+
+
