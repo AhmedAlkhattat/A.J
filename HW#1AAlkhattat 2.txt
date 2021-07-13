@@ -1,0 +1,264 @@
+//Name:Ahmed Alkhattat
+//Class: CPE 2350
+//Date : 06/23/2021
+//Location :My house
+//HW#1
+
+
+//problem #1 set 1
+
+#include <stdio.h>
+
+int main() 
+{
+//Solve for F with known value of m and and
+float m1,m2,m3;
+float a1,a2,a3;
+float F1,F2,F3;
+
+printf("Please enter  3 value for the force : \n");
+scanf("%f%f%f",&F1,&F2,&F3);
+printf("Please enter  3 value for the mass : \n");
+scanf("%f%f%f",&m1,&m2,&m3);
+printf("Please enter  3  value for the acceleration : \n");
+scanf("%f%f%f",&a1,&a2,&a3);
+
+ 
+F1=m1*a1 ;
+F2=m2*a2 ;
+F3=m3*a3 ;
+
+m1=F1/a1 ;
+m2=F2/a2 ;
+m3=F3/a3 ;
+
+a1=F1/m1 ;
+a2=F2/m2 ;
+a3=F3/m3 ;
+
+
+     printf("Based on the values you entered :\n ");
+     printf("First force value         = %f newton(N)‎\n",F1);
+     printf("Second force value         = %f newton(N)\n",F2);
+     printf("Third  force value         = %f newton(N)\n",F3);
+     printf("\n");
+     printf("First  mass  value         = %f (kg)‎\n",m1);
+     printf("Second mass  value         = %f (kg)\n",m2);
+     printf("Third  mass  value         = %f (kg)\n",m3);
+     printf("\n");
+     printf("First  acceleration value  = %f (m/s2)‎\n",a1);
+     printf("Second acceleration value  = %f (m/s2)\n",a2);
+     printf("Third  acceleration value  = %f (m/s2)\n",a3);
+
+
+
+    return 0;
+}
+
+
+
+
+//problem #1 set 2
+
+#include <stdio.h>
+
+int main() 
+{
+//Solve for F with known value of m and and
+float a1=0,a2=0,a3=0 ;
+float v1,v2,v3,v4,v5,v6;
+float t1,t2,t3,t4,t5,t6;
+float m = 10 ;
+float F1=0;
+float F2=0;
+float F3=0;
+
+printf("Please enter values for v1 ,and v2 (note :v2 must be greater then v1) : \n");
+
+scanf("%f%f",&v1,&v2);
+
+printf("Please enter values for v3 ,and v4 (note :v4 must be greater then v3) : \n");
+scanf("%f%f",&v3,&v4);
+
+printf("Please enter values for v5 ,and v6 (note :v6 must be greater then v5) : \n");
+scanf("%f%f",&v5,&v6);
+
+printf("Please enter  value for t1 and t2 (note :t2 must be greater then t1) : \n");
+scanf("%f%f",&t1,&t2);
+
+printf("Please enter  value for t3 and t4 (note :t4 must be greater then t3) : \n");
+scanf("%f%f",&t3,&t4);
+
+printf("Please enter  value for t5 and t6 (note :t6 must be greater then t5) : \n");
+scanf("%f%f",&t5,&t6);
+
+a1=(v2-v1)/(t2-t1);
+F1=m*a1;
+
+a2=(v4-v3)/(t4-t3);
+F2=m*a2;
+
+a3=(v6-v5)/(t6-t5);
+F3=m*a3;
+     printf("Based on the values you entered :\n ");
+     printf("The first  force  value  = %f newton(N)‎\n",F1);
+     printf(" The second force  value  = %f newton(N)‎\n",F2);
+     printf(" The third  force  value  = %f newton(N)‎\n",F3);
+    return 0;
+}
+
+
+
+
+
+//problem #2 a)
+
+#include <stdio.h>
+
+int main() 
+{
+//Solve for F with known value of m and and
+char text[26]={'M','y',' ','f','a','v','o','r','i','t','e',' ','f','o','o','d',' ','i','s',' ','s','u','s','h','i'};
+
+
+printf("The text is :\n%s\n\n",text);
+
+
+
+printf("The text addresses for each characters are :\n%x\t%x\t%x\t%x\t%x\t%x\t%x\t%x\t%x\t%x\t%x\t%x\t%x\t%x\t%x\t%x\t%x\t%x\t%x\t%x\t%x\t%x\t%x\t%x\t%x\t%x\t\n\n",text[0],text[1],text[2],text[3],text[4],text[5],text[6],text[7],text[8],text[9],text[10],text[11],text[12],text[13],text[14],text[15],text[16],text[17],text[18],text[19],text[20],text[21],text[22],text[23],text[24],text[25]);
+
+printf("The text decimal value is :\n%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t\n\n",text[0],text[1],text[2],text[3],text[4],text[5],text[6],text[7],text[8],text[9],text[10],text[11],text[12],text[13],text[14],text[15],text[16],text[17],text[18],text[19],text[20],text[21],text[22],text[23],text[24],text[25]);
+
+
+printf("The text two field widths  :\n%2c%2c%2c%2c%2c%2c%2c%2c%2c%2c%2c%2c%2c%2c%2c%2c%2c%2c%2c%2c%2c%2c%2c%2c%2c%2c\n\n",text[0],text[1],text[2],text[3],text[4],text[5],text[6],text[7],text[8],text[9],text[10],text[11],text[12],text[13],text[14],text[15],text[16],text[17],text[18],text[19],text[20],text[21],text[22],text[23],text[24],text[25]);
+
+//if we use %c we need to print each element at its position as a parts
+
+ printf("The text using char format is :\n%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n\n",text[0],text[1],text[2],text[3],text[4],text[5],text[6],text[7],text[8],text[9],text[10],text[11],text[12],text[13],text[14],text[15],text[16],text[17],text[18],text[19],text[20],text[21],text[22],text[23],text[24],text[25]);
+//When we use %s we notice that we print the whole array as a one piece and we don't have to go to each element
+
+printf("The text using string format  is :\n%s\n\n",text);
+return 0 ;
+
+
+//from above we observe that when we use %c we need to print each element by its position so in that case we need to print all the positions in the array .And in this case its has advantage that we can figure out how many letters in the word and we are look for a specific letter and how many time that letter will be  repeated.However when we use %s we print the string as a whole with out have the ability to go through each element and the advantage of that when we want to print something we don't need to print every element separately.
+}
+
+
+
+//problem #2 b)
+
+#include <stdio.h>
+
+int main() 
+{
+char userInput;
+printf("Please  enter some ASCII like !@#$%^&* to find the address and the hexadecimal for it :");
+
+scanf(" %c" ,&userInput);
+
+printf("The address for '%c'",userInput);
+printf(" is : %x\n",userInput);
+
+
+printf("The hexadecimal value of ASCII you entered '%c'",userInput);
+
+printf(" is : %x\n",userInput);
+
+//We observe from the out put values that the address and the hexadecimal are the same.
+}
+
+
+
+//problem #2 c(1)
+
+#include <stdio.h>
+
+int main() 
+{
+int userInput1;
+float userInput2;
+printf("Please  enter an integer  :");
+scanf("%f",& userInput1);
+printf("Please  enter a float  :");
+scanf("%f" ,& userInput2);
+
+printf("The integer you entered with 'f'scanf and 'd' printf is :\n%d\n",userInput1);
+printf("The float you entered with 'f' scanf and 'd' printf is :\n%d ",userInput2);
+
+return 0 ;
+
+//output
+//Please  enter an integer  :12
+//Please  enter a float  :2.5
+//The integer you entered with 'f'scanf and 'd' printf is :
+//1094713344
+//The float you entered with 'f' scanf and 'd' printf is :
+//0  
+//From the output above we notice that the input value doesn't match the output value due to the difference of the format that we entered with and the format we printed with .
+
+}
+
+
+
+//problem #2 c(2)
+
+#include <stdio.h>
+
+int main() 
+{
+int userInput1;
+float userInput2;
+printf("Please  enter an integer  :");
+scanf("%d",& userInput1);
+printf("Please  enter a float  :");
+scanf("%d" ,& userInput2);
+
+printf("The integer you entered with 'f'scanf and 'd' printf is :\n%f\n",userInput1);
+printf("The float you entered with 'f' scanf and 'd' printf is :\n%f ",userInput2);
+
+return 0 ;
+/*output
+Please  enter an integer  :1
+Please  enter a float  :1.2
+The integer you entered with 'f'scanf and 'd' printf is :
+0.000000
+The float you entered with 'f' scanf and 'd' printf is :
+0.00000 
+We notice that the output doesn't match the input due to the deferences in data type between float and integers */
+
+}
+
+
+
+
+//problem #2 c(3)
+
+#include <stdio.h>
+
+int main() 
+{
+int userInput1;
+float userInput2;
+printf("Please  enter an integer  :");
+scanf("%d",& userInput1);
+printf("Please  enter a float  :");
+scanf("%f" ,& userInput2);
+
+printf("The result of adding the integer and the float in 'd' format  is :\n %d",userInput1+userInput1);
+
+return 0 ;
+/*
+Output
+Please  enter an integer  :10
+Please  enter a float  :10.9
+The result of adding the integer and the float in 'd' format  is :
+ 20 
+
+ We notice that when we print with d format the program ignore the fraction with the float and consider only the whole numbers
+ */
+
+}
+
+
+
